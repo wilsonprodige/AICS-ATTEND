@@ -66,9 +66,16 @@ const login=(req,res)=>{
 
             const token = jwt.sign({id:data.id},"secret-key")
             const {password, ...others}=data
-            res.cookie("accessToken",token,{
-                httpOnly:true
-            }).json(data.id)
+            try{
+                res.cookie("accessToken",token,{
+                    httpOnly:true
+                }).json(data.id)
+
+            }
+            catch(err){
+                console.log(err)
+            }
+           
 
         }else{
             return res.json({Error:"user not found"})
