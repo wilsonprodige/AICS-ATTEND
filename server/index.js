@@ -14,7 +14,7 @@ const privilgeRoutes = require('./routes/privilege.js')
 
 //middlewares
 app.use(cors({
-    origin:"https://aics-attend.vercel.app",
+    origin:"https://aics-attend.onrender.com",
     credentials:true
 }))
 app.use(cookieParser())
@@ -24,7 +24,7 @@ app.use(express.urlencoded({extended:true}))
 //upload 
 const storage = multer.diskStorage({
     destination: function(req, file,cb){
-        cb(null,'../client/public/upload/')
+        cb(null,'./uploads/')
     },
     filename: function (req,file,cb){
         cb(null,Date.now()+file.originalname)

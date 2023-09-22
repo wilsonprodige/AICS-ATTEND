@@ -12,7 +12,7 @@ const register=(req,res)=>{
         const salt = bcrypt.genSaltSync(10);
         const hashedPassword = bcrypt.hashSync(req.body.password,salt);
         //creating user account
-        User.create({username:req.body.username,name:req.body.name,email:req.body.email,password:hashedPassword,roleId:1,accountstatus:0})
+        User.create({username:req.body.username,name:req.body.name,email:req.body.email,password:hashedPassword,roleId:3,accountstatus:0})
         .then(result=>{
             if(result){
                 res.json({message:"account created"})

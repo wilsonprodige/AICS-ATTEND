@@ -341,12 +341,13 @@ export default {
         try{
             const formData = new FormData();
             formData.append("file",this.profileAvatar);
+            console.log(this.profileAvatar)
             const res = await makeRequest.post("/upload",formData);
             return res.data.file_name
 
-
         }catch(err){
             console.log(err);
+            return ""
         }
 
     },
