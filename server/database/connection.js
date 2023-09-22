@@ -16,6 +16,7 @@ sequelize.authenticate()
     console.log(process.env.DB_HOST)
 })
 .catch(error=>{
+    console.log(process.env.DB_HOST)
     console.log(error)
 })
 
