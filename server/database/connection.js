@@ -13,6 +13,7 @@ const sequelize = new Sequelize(dbname,username,password,{
 sequelize.authenticate()
 .then(res=>{
     console.log('connected...')
+    console.log(process.env.DB_HOST)
 })
 .catch(error=>{
     console.log(error)
