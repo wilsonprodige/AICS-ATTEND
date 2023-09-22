@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const sequelize= require('../database/connection.js')
 
-const Role = sequelize.define("Role",{
+const Role = sequelize.define("role",{
     id:{
         type:Sequelize.INTEGER(11),
         allowNull:false,
