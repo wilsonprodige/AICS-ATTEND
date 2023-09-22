@@ -14,7 +14,7 @@ const privilgeRoutes = require('./routes/privilege.js')
 
 //middlewares
 app.use(cors({
-    origin:"https://aics-attend.vercel.app/",
+    origin:"https://aics-attend.vercel.app",
     credentials:true
 }))
 app.use(cookieParser())
