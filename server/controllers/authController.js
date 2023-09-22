@@ -69,7 +69,8 @@ const login=(req,res)=>{
             try{
                 res.cookie("accessToken",token,{
                     httpOnly:true,
-                    secure:true
+                    secure:true,
+                    sameSite:"None"
                 }).json(data.id)
 
             }
